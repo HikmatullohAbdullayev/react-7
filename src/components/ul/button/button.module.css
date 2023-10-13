@@ -1,0 +1,24 @@
+.frist{
+    background-color:blue;
+    color:red;
+    padding: 8px 15px;
+    border-radius:8px;
+    outline: transparent;
+    gap: 15px;
+
+}
+.second{
+    background-color:greenyellow;
+    color:red;
+    padding: 8px 15px;
+    border-radius:8px;
+    outline: transparent;
+    gap: 15px;
+}
+.text{
+    background-color:rgb(229, 229, 229);
+    color:#000000;
+    padding: 8px 15px;
+    border-radius:8px;
+    outline: transparent;
+}

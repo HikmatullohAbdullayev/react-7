@@ -16,7 +16,7 @@ export const Button = ({
         className={
           variant === "frist"
             ? style.frist
-            : variant === "scond"
+            : variant === "second"
             ? style.second
             : style.text
         }
