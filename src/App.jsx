@@ -1,20 +1,23 @@
 import { useState } from 'react'
-import { Button } from "./components/ul/button"
-import { HomeIcon } from './assets/icon/button-icon.jsx'
+import { Route, Routes } from 'react-router'
+import { MainLayuot } from './layout/main-layout'
+import { Home } from './pages/home'
+import { Edit } from './pages/edit'
+import { Post } from './pages/post'
 import './App.css'
 
 function App() {
 
   return (
     <>
-    <div className='container'>
-      <div>
-        
-         <Button   variant="second" >send</Button> 
-          <Button   variant="frist" >send</Button>
-      </div>
+      <Routes>
+        <Route path='/' element={<MainLayuot/>}>
+          <Route index element ={<Home/>}/>
+          <Route path='edit' element ={<Edit/>}/>
+          <Route path='post' element ={<Post/>}/>
+        </Route>
+      </Routes>
       
-    </div>
     </>
   )
 }
