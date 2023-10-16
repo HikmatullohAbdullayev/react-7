@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Route, Routes } from 'react-router'
+import { Route, Routes } from 'react-router-dom'
 import { MainLayuot } from './layout/main-layout'
 import { Home } from './pages/home'
 import { Edit } from './pages/edit'
@@ -11,10 +11,10 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<MainLayuot/>}>
-          <Route index element ={<Home/>}/>
-          <Route path='edit' element ={<Edit/>}/>
-          <Route path='post' element ={<Post/>}/>
+        <Route path='/' element={ <MainLayuot/> }>
+          <Route index element ={ <Home/> }/>
+          <Route path='edit' element ={ <Edit/> }/>
+          <Route path='post' element ={ <Post/> }/>
         </Route>
       </Routes>
       
