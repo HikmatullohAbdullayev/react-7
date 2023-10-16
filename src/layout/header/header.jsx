@@ -8,7 +8,7 @@ export const Header = () =>{
     const location = useLocation()
 
 const changeRoute = () =>{
-    if (location.pathname == "/post") {
+    if (location.pathname == "/post" || location.pathname == "/edit") {
         return navigate("/")
     }
         navigate('/post' )
@@ -18,7 +18,7 @@ const changeRoute = () =>{
         <>
         <div>
             <Button onClick={changeRoute} variant="text">
-            {location.pathname == "/post"? "Back" :  "yangi qo'shish"}
+            {location.pathname == "/post"? "Back" : location.pathname == "/edit" ? "Back" : "yangi qo'shish"}
                 
                 </Button>
         </div>
