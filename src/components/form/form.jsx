@@ -4,23 +4,24 @@ import {useForm} from "react-hook-form"
 import {request} from "../../config/requset"
 import { Button } from "../ul/button/button"
 
-export const Form = ({dafaultValue }) =>{
+export const Form = ({defaultValue }) =>{
     const navigate = useNavigate()
     const {
         register,
         handleSubmit,
         formState: { errors },
         reset,
-      } = useForm({ dafaultValues:{...dafaultValue}});
+      } = useForm({ defaultValue:{...defaultValue}});
     
       const submit =(data) =>{
-        if (dafaultValue) {
-            request.put(`/posts/${dafaultValue.id}`, data)
+        if (defaultValue) {
+            request.put(`/posts/${defaultValue.id}`, data)
           return  navigate('/', {replace:true})
         }
         request.post('/posts', data)
         reset()
       }
+      
     return (
         <>
         <form onSubmit={handleSubmit(submit)}> 
@@ -34,7 +35,7 @@ export const Form = ({dafaultValue }) =>{
         </div>
         <div>
             <Button type="submit" variant="second"> 
-                post
+                post/edit
             </Button>
         </div>
       </form>
